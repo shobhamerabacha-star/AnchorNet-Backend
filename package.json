@@ -1,19 +1,24 @@
 {
   "name": "anchornet-backend",
   "version": "0.9.0",
-  "description": "AnchorNet API – routing, settlement, liquidity indexer",
+  "description": "AnchorNet API \u2013 routing, settlement, liquidity indexer",
   "main": "dist/index.js",
   "scripts": {
-    "build": "tsc",
-    "start": "node dist/index.js",
-    "dev": "ts-node-dev --respawn src/index.ts",
+    "build": "node init && tsc",
+    "start": "node init && node dist/index.js",
+    "dev": "node init && ts-node-dev --respawn src/index.ts",
     "test": "jest",
     "lint": "eslint \"src/**/*.ts\""
   },
   "engines": {
     "node": ">=18"
   },
-  "keywords": ["anchornet", "stellar", "liquidity", "api"],
+  "keywords": [
+    "anchornet",
+    "stellar",
+    "liquidity",
+    "api"
+  ],
   "license": "MIT",
   "dependencies": {
     "express": "^4.21.0",
